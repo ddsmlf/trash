@@ -1,5 +1,5 @@
 import unittest
-from chatbot import ChatbotAI
+from main import ChatbotAI
 
 class TestChatbotAI(unittest.TestCase):
     def setUp(self):
