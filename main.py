@@ -1,4 +1,5 @@
 import re
+import random
 
 class ChatbotAI:
     def __init__(self, name):
