@@ -4,27 +4,28 @@ import random
 class ChatbotAI:
     def __init__(self, name):
         self.name = name
-
-    def greet(self):
-        return f"Bonjour ! Je suis {self.name}, votre chatbot IA préféré."
-
-    def generate_response(self, user_input):
-        responses = [
+        self.responses = [
             "Je suis désolé, je ne comprends pas.",
             "Pouvez-vous reformuler votre question s'il vous plaît ?",
             "Intéressant... Pourriez-vous en dire plus ?",
             "Hmm, laissez-moi y réfléchir un instant...",
             "C'est une question complexe, mais je vais faire de mon mieux pour y répondre !"
         ]
-        return random.choice(responses)
-
-    def joke(self):
-        jokes = [
+        self.jokes = [
             "Pourquoi les ordinateurs ont-ils toujours froid ? Parce qu’ils ont le ventirad.",
             "Qu'est-ce qu'un algorithme? C'est un mot arabe, cela signifie : 'Tu as oublié un point-virgule'.",
             "Pourquoi les développeurs détestent-ils Noël ? Parce qu'il y a trop de branches dans l'arbre."
         ]
-        return random.choice(jokes)
+
+    def greet(self):
+        return f"Bonjour ! Je suis {self.name}, votre chatbot IA préféré."
+
+    def generate_response(self, user_input):
+        return random.choice(self.responses)
+
+    def joke(self):
+        
+        return random.choice(self.jokes)
 
     def calculate_expression(self, expression):
         reponse = f"Le résultat du calcul {expression} est "
